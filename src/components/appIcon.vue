@@ -15,7 +15,7 @@
     width:90px;
     height:90px;
     border-radius: 25px;
-    background:black;
+    background:rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
     align-items: flex-end;
