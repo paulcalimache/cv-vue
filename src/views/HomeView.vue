@@ -1,8 +1,8 @@
 <script setup>
 import appIcon from '@/components/appIcon.vue';
-let aboutTitle = 'About'; let aboutIcon = 'src/assets/Icons/paper.svg'; let aboutColor = 'rgb(38, 70, 83)';
-let worksTitle = 'Works'; let worksIcon = 'src/assets/Icons/works-box.svg'; let worksColor = 'rgb(247, 214, 224)'
-let contactTitle = 'Contact'; let contactIcon = 'src/assets/Icons/contact-mail-red.svg'; let contactColor = 'rgb(177, 221, 241)';
+let aboutTitle = 'About'; let aboutIcon = '/Icons/paper.svg'; let aboutColor = 'rgb(38, 70, 83)';
+let worksTitle = 'Works'; let worksIcon = '/Icons/works-box.svg'; let worksColor = 'rgb(247, 214, 224)'
+let contactTitle = 'Contact'; let contactIcon = '/Icons/contact-mail-red.svg'; let contactColor = 'rgb(177, 221, 241)';
 let linkedinTitle = 'Linkedin';
 let githubTitle = 'Github';
 
