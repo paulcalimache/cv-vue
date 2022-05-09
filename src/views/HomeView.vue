@@ -3,16 +3,18 @@ import appIcon from '@/components/appIcon.vue';
 let aboutTitle = 'About'; let aboutIcon = '/Icons/paper.svg'; let aboutColor = 'rgb(38, 70, 83)';
 let worksTitle = 'Works'; let worksIcon = '/Icons/works-box.svg'; let worksColor = 'rgb(247, 214, 224)'
 let contactTitle = 'Contact'; let contactIcon = '/Icons/contact-mail-red.svg'; let contactColor = 'rgb(177, 221, 241)';
-let linkedinTitle = 'Linkedin';
-let githubTitle = 'Github';
+let linkedinTitle = 'Linkedin'; let linkedinIcon = '/Icons/LinkedIn.png'; let linkedinColor = 'rgb(0, 127, 188)';
+let githubTitle = 'Github'; let githubIcon = '/Icons/github.png'; let githubColor = 'black';
 
 </script>
 
 <template>
   <div id="home">
-    <a href="/about"><appIcon :title="aboutTitle" :icon="aboutIcon" :bgcolor="aboutColor"/></a>
+    <a href="/about"><appIcon :title="aboutTitle" :icon="aboutIcon" :bgcolor="aboutColor" href="/about"/></a>
     <a href="/works"><appIcon :title="worksTitle" :icon="worksIcon" :bgcolor="worksColor"/></a>
     <a href="/contact"><appIcon :title="contactTitle" :icon="contactIcon" :bgcolor="contactColor"/></a>
+    <a href="https://github.com/paulcalimache"><appIcon :title="githubTitle" :icon="githubIcon" :bgcolor="githubColor"/></a>
+    <a href="https://www.linkedin.com/in/paul-calimache/"><appIcon :title="linkedinTitle" :icon="linkedinIcon" :bgcolor="linkedinColor"/></a>
   </div>
 </template>
 
@@ -24,9 +26,13 @@ let githubTitle = 'Github';
     background-position: center;
     background-size: cover;
     padding-top:40px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows:min-content min-content;
+    row-gap:40px;
+    /*display: flex;
     justify-content: space-evenly;
-    align-items:flex-start;
+    align-items:flex-start;*/
   }
 
   a {
