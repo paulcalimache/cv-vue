@@ -10,7 +10,7 @@ let githubTitle = 'Github'; let githubIcon = '/Icons/github.png'; let githubColo
 
 <template>
   <div id="home">
-    <a href="/about"><appIcon :title="aboutTitle" :icon="aboutIcon" :bgcolor="aboutColor" href="/about"/></a>
+    <a href="/about"><appIcon :title="aboutTitle" :icon="aboutIcon" :bgcolor="aboutColor"/></a>
     <a href="/works"><appIcon :title="worksTitle" :icon="worksIcon" :bgcolor="worksColor"/></a>
     <a href="/contact"><appIcon :title="contactTitle" :icon="contactIcon" :bgcolor="contactColor"/></a>
     <a href="https://github.com/paulcalimache"><appIcon :title="githubTitle" :icon="githubIcon" :bgcolor="githubColor"/></a>
@@ -33,12 +33,5 @@ let githubTitle = 'Github'; let githubIcon = '/Icons/github.png'; let githubColo
     /*display: flex;
     justify-content: space-evenly;
     align-items:flex-start;*/
-  }
-
-  a {
-    text-decoration: none;
-  }
-  a::after {
-    text-decoration: none;
   }
 </style>
