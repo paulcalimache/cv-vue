@@ -1,10 +1,11 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView } from 'vue-router';
 </script>
 
 <template>
   <main>
     <div id="notch"></div>
+    <a id="backHome" href="/" v-if="$route.name !== 'home'"><img src="https://www.svgrepo.com/show/77532/left-arrow-sketch.svg" width="40" height="40"></a>
     <RouterView />
   </main>
 </template>
@@ -44,5 +45,16 @@ main::-webkit-scrollbar {
   background-color: black;
   z-index: 1;
 }
-
+#backHome {
+  position:absolute;
+  z-index:2;
+  top:10px;
+  left:10px;
+}
+a {
+  text-decoration: none;
+}
+a::after {
+  text-decoration: none;
+}
 </style>
