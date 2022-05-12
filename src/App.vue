@@ -26,8 +26,12 @@ main {
   height: 650px;
   border:5px black solid;
   border-radius: 30px;
-  overflow: hidden;
   position:relative;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+main::-webkit-scrollbar {
+  display: none;
 }
 
 #notch {

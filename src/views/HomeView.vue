@@ -13,8 +13,8 @@ let githubTitle = 'Github'; let githubIcon = '/Icons/github.png'; let githubColo
     <a href="/about"><appIcon :title="aboutTitle" :icon="aboutIcon" :bgcolor="aboutColor" href="/about"/></a>
     <a href="/works"><appIcon :title="worksTitle" :icon="worksIcon" :bgcolor="worksColor"/></a>
     <a href="/contact"><appIcon :title="contactTitle" :icon="contactIcon" :bgcolor="contactColor"/></a>
-    <a href="https://github.com/paulcalimache"><appIcon :title="githubTitle" :icon="githubIcon" :bgcolor="githubColor"/></a>
-    <a href="https://www.linkedin.com/in/paul-calimache/"><appIcon :title="linkedinTitle" :icon="linkedinIcon" :bgcolor="linkedinColor"/></a>
+    <a href="https://github.com/paulcalimache" target="_blank"><appIcon :title="githubTitle" :icon="githubIcon" :bgcolor="githubColor"/></a>
+    <a href="https://www.linkedin.com/in/paul-calimache/" target="_blank"><appIcon :title="linkedinTitle" :icon="linkedinIcon" :bgcolor="linkedinColor"/></a>
   </div>
 </template>
 
@@ -30,9 +30,6 @@ let githubTitle = 'Github'; let githubIcon = '/Icons/github.png'; let githubColo
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows:min-content min-content;
     row-gap:40px;
-    /*display: flex;
-    justify-content: space-evenly;
-    align-items:flex-start;*/
   }
 
   a {
