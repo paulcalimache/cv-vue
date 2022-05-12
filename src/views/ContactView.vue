@@ -6,13 +6,17 @@
     <div class="contact-header">
       <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_in4cufsz.json"  background="transparent"  speed="1"  style="width: 250px; height: 200px;"  loop autoplay></lottie-player>
     </div>
-    <div class="contact-body">
-      <div class="contact-row"><span class="label">TO:</span></div>
-      <div class="contact-row"><label for="email">FROM:</label><input type="email" id="email" name="email"></div>
-      <div class="contact-row"><label for="subject">SUBJECT:</label><input type="text" id="subject" name="subject"></div>
-      <div class="contact-row"><label for="subject">MESSAGE:</label></div>
-      <textarea type="email" id="email" name="email"></textarea>
-    </div>
+    <form name="contact" method="POST" data-netlify="true">
+      <div class="contact-body">
+        <div class="contact-row"><span class="label">TO:</span><span class="input">paul.calimache@gmail.com</span></div>
+        <div class="contact-row"><label for="email">FROM:</label><input type="email" id="email" name="email"></div>
+        <div class="contact-row"><label for="subject">SUBJECT:</label><input type="text" id="subject" name="subject"></div>
+        <div class="contact-row"><label for="subject">MESSAGE:</label></div>
+        <textarea type="email" id="email" name="email"></textarea>
+      </div>
+      <button id="submit" type="submit"><img src="/Icons/paper-plane.png" id="submit-icon" width="80%"/></button>
+      <div class="submit-circle"></div>
+    </form>
   </div>
 </template>
 
@@ -21,12 +25,13 @@
     width:100%;
     height:100%;
     background:rgb(255, 255, 255);
+    overflow: hidden;
 }
 .contact-header {
   display:flex;
-    justify-content: center;
-    position:relative;
-    background:green;
+  justify-content: center;
+  position:relative;
+  background:green;
 }
 .contact-body {
   width:100%;
@@ -41,19 +46,49 @@
   column-gap:5px;
   align-items: center;
 }
-label, .label {
+label, .label, .input {
   color:green;
   font-weight: bold;
 }
-input, textarea {
+input, textarea, .input {
   flex-grow: 1;
   border:0;
   outline:none;
+  font-weight: bold;  
 }
 textarea {
   width:100%;
-  height:300px;
+  height:280px;
   overflow-y:hidden;
   resize: none;
+  margin:0px 5px;
+}
+
+#submit {
+  position:absolute;
+  bottom:20px;
+  right:20px;
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  border:4px black solid;
+  padding:5px;
+  background-color: green;
+  transform: translate(-8px, -8px);
+  z-index: 2;
+}
+#submit:hover {
+  cursor:pointer;
+  transform: translate(0px, 0px)
+}
+.submit-circle {
+  position:absolute;
+  bottom:20px;
+  right:20px;
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  background-color:black;
+  z-index:1;
 }
 </style>
