@@ -3,7 +3,7 @@ import { RouterLink, RouterView } from 'vue-router';
 </script>
 
 <template>
-  <main>
+  <main id="main">
     <div id="notch"></div>
     <a id="backHome" href="/" v-if="$route.name !== 'home'"><img src="https://www.svgrepo.com/show/77532/left-arrow-sketch.svg" width="40" height="40"></a>
     <RouterView />
