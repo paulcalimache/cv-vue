@@ -36,7 +36,7 @@ main::-webkit-scrollbar {
 }
 
 #notch {
-  position: absolute;
+  position: fixed;
   left:50%;
   transform: translateX(-50%);
   width:180px;
@@ -46,10 +46,11 @@ main::-webkit-scrollbar {
   z-index: 1;
 }
 #backHome {
-  position:absolute;
+  position:fixed;
+  left:inherit;
+  margin-left:10px;
+  margin-top:10px;
   z-index:2;
-  top:10px;
-  left:10px;
 }
 a {
   text-decoration: none;

@@ -1,9 +1,9 @@
 <template>
   <div id="about">
-    <div class="about-hero">
-      <h1>This is an about page</h1>
+    <div class="about-image">
+      <img src="/Icons/profile-illustration.png">
     </div>
-    <div class="about-hero">
+    <div class="about-body">
       <h1>This is an about page</h1>
     </div>
   </div>
@@ -13,9 +13,17 @@
   #about {
     background:white;
   }
-  .about-hero {
-    height:650px;
+  .about-image {
+    position:sticky;
+    top:0;
     width:100%;
-    padding:40px 20px;
+    padding-top:20px;
+  }
+  .about-body {
+    background:white;
+    border-radius:20px 20px 0 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    width:100%;
+    height:100vh;
   }
 </style>
